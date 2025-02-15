@@ -6,7 +6,7 @@ Specific, measurable targets for service performance, such as availability, late
 
 ## Service-Level Agreements (SLAs)
 
-Formal contracts between a service provider and a customer, defining the expected level of service, performance, and reliability.
+Formal contracts between a service provider and a customer, specifying some SLOs, penalties for violation.
 
 ## Reliable Crossover
 
@@ -19,3 +19,15 @@ It is impossible for a distributed data store to simultaneously provide more tha
 ## Fan-out
 
 A single request is distributed to multiple servers or services to parallelize work.
+
+## Failure mode analysis (FMA)
+
+Identify the types of failures your application may experience and possible recovery strategies.
+
+## Crash-Stop
+
+When a node fails, it never comes back.
+
+## Crash-Recovery
+
+A node fails but may restart and rejoin the system later.
