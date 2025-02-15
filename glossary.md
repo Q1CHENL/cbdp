@@ -31,3 +31,11 @@ When a node fails, it never comes back.
 ## Crash-Recovery
 
 A node fails but may restart and rejoin the system later.
+
+## Unreliable Network
+
+A network where messages can be delayed, lost, duplicated, or delivered out of order.
+
+## Unreliable clocks
+
+Clocks on different nodes in a distributed system may not be perfectly synchronized.
