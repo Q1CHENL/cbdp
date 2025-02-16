@@ -15,7 +15,7 @@ Broadcast/multicast is a group communication
 
 - Types (System model):
 
-  - Best-effort broadcast: Transmission speed, network delay, packet loss are not garanteed to be avoided
+  - Best-effort broadcast: Transmission speed, network delay, packet loss are not guaranteed to be avoided
   - Reliable: non-faulty nodes retransmit every dropped msg
 
 - Terminology:

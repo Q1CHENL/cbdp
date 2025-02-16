@@ -64,11 +64,11 @@
 
 ### Consistency
 
-- Consistency across multiple servers
+- across multiple servers
 - Two main choices:
   - Strongly consistent operations (cost of additional latency)
   - Inconsistent operations (better performance/avaliability, harder to write/reason about)
-- Many apps (e.g Gmail): eventual consistency
+- Many apps (e.g Gmail): eventual
 - Modern data analytics: strong consistency
 
 ### Performance

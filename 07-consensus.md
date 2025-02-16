@@ -25,7 +25,7 @@ Common consensus algorithms
 
 > Why not asynchronous
 >
-> - FLP (Fischer, Lynch, Paterson) result: no deterministic consensus algorithm garantees to terminate in asynchronous crash-recovery system model
+> - FLP (Fischer, Lynch, Paterson) result: no deterministic consensus algorithm guarantees to terminate in asynchronous crash-recovery system model
 > - Paxos and Raft etc. clocks only used for timeouts/failures detector to ensure progress. Safety (correctness) does not depend on timing.
 
 ### Leader
