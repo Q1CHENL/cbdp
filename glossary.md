@@ -39,3 +39,7 @@ A network where messages can be delayed, lost, duplicated, or delivered out of o
 ## Unreliable clocks
 
 Clocks on different nodes in a distributed system may not be perfectly synchronized.
+
+## Star-Schema
+
+A database design where a central fact table (containing transactional data) is surrounded by dimension tables (containing descriptive attributes).
