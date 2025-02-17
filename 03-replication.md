@@ -73,7 +73,7 @@ Any node can go down
 
 - Change data capture (CDC) based replication – logical log: at the granularity of rows
 
-  - Easier for extenal use, run on different databases
+  - Easier for external use, run on different databases
 
 ```sql
 -- Source database has this table

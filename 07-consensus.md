@@ -73,7 +73,7 @@ Leader election and log replication
 
 - Two different timeouts:
 
-  - Election timeout ([T, 2T] e.g 150-300ms): the time a Follower waits to become a candidate, i.e the time a Follower has not received a RPC (hearbeat msg)
+  - Election timeout ([T, 2T] e.g 150-300ms): the time a Follower waits to become a candidate, i.e the time a Follower has not received a RPC (heartbeat msg)
   - Heartbeat timeout (50-150ms): the time interval a leader sends a heartbeat msg (Empty AppendEntries RPC)
     > Heartbeat TO < Election TO to ensure followers receive regular leader messages and don’t mistakenly start a new election
 

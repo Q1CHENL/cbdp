@@ -20,14 +20,28 @@ Different meanings in different contexts
 
 - Read uncommitted: a transaction can read uncommitted changes.
 
-> Differtent from Consensus: If the transaction updates data on multiple nodes
+> Different from Consensus: If the transaction updates data on multiple nodes
 >
 > - all nodes commit/abort (as a single unit)
 > - if any node fails, all nodes must abort
 
+## Consistency models
+
+- **Strict Consistency:** Every read reflects the very latest write instantly—a theoretical ideal requiring a global clock.
+
+- **Linearizability:** Operations appear to occur atomically in real time; if one finishes before another starts, all clients see them in that order.
+
+- **Causal Consistency:** Only causally related operations are ordered consistently; concurrent operations may be seen in different orders.
+
+- **Monotonic Reads/Writes:**  
+   - **Monotonic Reads:** Once a value is read, later reads won’t return an older value.  
+   - **Monotonic Writes:** A client’s writes are applied in the order issued.
+
+- **Read-Your-Writes:** A client always sees its own updates in subsequent reads.
+
 ## Two-phase commit (2PC)
 
-Most common algorithm to ensure **atomic commit across multipl nodes**.z
+Most common algorithm to ensure **atomic commit across multiple nodes**.z
 
 > ![2PC](assets/2pc.png)
 >

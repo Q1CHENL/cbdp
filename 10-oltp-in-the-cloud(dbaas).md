@@ -137,6 +137,8 @@ Why treat log seperately? -> Potential bottleneck of OLTP system
 
 ![clsSummary](assets/cls-summary.png)
 
+> Write is committed when it's **appended to the log**
+
 #### Disaggregated Compute-Buffer-Storage Architecture
 
 Elastic **Shared remote buffer** for all compute nodes (r/w-and ro-nodes)
@@ -151,7 +153,7 @@ Elastic **Shared remote buffer** for all compute nodes (r/w-and ro-nodes)
 Summary
 ![cbsSummary](assets/cbs-summary.png)
 
-### Partitioned log-replicaed state machine (Google Spanner)
+### Partitioned log-replicated state machine (Google Spanner)
 
 Millions of nodes, petabytes of data, distributed globally
 
@@ -175,7 +177,8 @@ Millions of nodes, petabytes of data, distributed globally
 
 A **RO-Txn** observes a consistent snapshot
 
-- Each R/W-Txn has commit timestamp _tw_ and snapshot _tr_, it only observes most recent _tw <= tr_
+- Multi-version concurrency control (MVCC)
+  - Each R/W-Txn has commit timestamp _tw_ and snapshot _tr_, it only observes most recent _tw <= tr_
 
 > Observes **Causal consistency**
 
