@@ -95,5 +95,6 @@ A physical facility that enterprises use to house computing and storage infrastr
   - Dev denvironment (e.g Google App Engine)
 - Serverless/Function as a Service (FaaS)
   - Overlap with PaaS: vendors provide setup, capacity planning and server management etc.
+  - Developers write and deploy small and self-contained functions, which run in response to events (API calls, file uploads, etc.)
 - Software as a Service (SaaS)
   - Software applcation (handles by vendor, e.g Microsoft 365)

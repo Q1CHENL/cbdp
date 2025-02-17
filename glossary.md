@@ -43,3 +43,11 @@ Clocks on different nodes in a distributed system may not be perfectly synchroni
 ## Star-Schema
 
 A database design where a central fact table (containing transactional data) is surrounded by dimension tables (containing descriptive attributes).
+
+## Straggler
+
+A slow-running task in a distributed computing system that delays overall job completion.
+
+## OLAP
+
+An approach to quickly answer multi-dimensional analytical (MDA) queries
