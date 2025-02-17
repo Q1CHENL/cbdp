@@ -51,3 +51,7 @@ A slow-running task in a distributed computing system that delays overall job co
 ## OLAP
 
 An approach to quickly answer multi-dimensional analytical (MDA) queries
+
+## Jitter
+
+The variation in delay between data packets in a network. Instead of arriving at a steady, predictable rate, packets experience uneven spacing, causing fluctuations in transmission times.
