@@ -168,6 +168,6 @@ Edge cases:
 
 #### Sloppy Quorums with Hinted Handoff
 
-- Sloppy quorum: the writes and reads still require `w` and `r` successful responses, but those may be by nodes that are not the designated “home” nodes for a value. Instead, operations are performed on **first N healthy nodes from the preference list**.
-- Hinted handoff: Once the network interruption is fixed, any writes that one node temporarily accepted on behalf of another node are sent to the appropriate “home” nodes. This is called the hinted handoff.
+- Sloppy quorum: the writes and reads still require `w` and `r` successful responses, but those may be by nodes that are not the designated "home" nodes for a value. Instead, operations are performed on **first N healthy nodes from the preference list**.
+- Hinted handoff: Once the network interruption is fixed, any writes that one node temporarily accepted on behalf of another node are sent to the appropriate "home" nodes. This is called the hinted handoff.
 - Increase write availability and durability (write won't get lost)

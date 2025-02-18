@@ -215,4 +215,4 @@ Strong consistency and serializability
 Distributed transactions can scale
 
 - With low-latency high-bandwidth network interconnects using RDMA
-- Oracle’s RAC and Exadata
+- Oracle's RAC and Exadata

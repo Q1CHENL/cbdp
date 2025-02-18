@@ -75,7 +75,7 @@ Specify the assumptions about faults may occur
 
 #### Node behavior
 
-Each node execute a algo of onee of the following:
+Each node executes an algorithm of one of the following:
 
 - Crash-stop
 - Crash-recovery (in-memory state lost)
@@ -85,9 +85,9 @@ Each node execute a algo of onee of the following:
 
 #### Timing behavior
 
-1. Synchronouse: latency <= a upper bound, nodes execute algo at a known speed
+1. Synchronous: latency <= an upper bound, nodes execute algorithm at a known speed
 2. Partially synchronous: async for a finite time, otherwise sync
-3. Asynchronous: no timing garantuees at all
+3. Asynchronous: no timing guarantees at all
 
 - Violation of synchrony in practice
   - Predictable latency (msg loss, congestion/contention, network/route reconfig)

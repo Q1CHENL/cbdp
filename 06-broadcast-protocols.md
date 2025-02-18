@@ -7,7 +7,7 @@ Broadcast/multicast is a group communication
 - Protocol layer: message transmitting control
 - Application layer: e.g a chat application
 - Send: a msg os intended to transmitted from one node to another
-- Receive: a msg is arrived but held before delivering. A node does not get to choose choose if to receive a msg or not, but it can choose to deliver it or not.
+- Receive: a msg has arrived but is held before delivering. A node does not get to choose if to receive a msg or not, but it can choose to deliver it or not.
 - Deliver: the msg is delivered from protocol layer to application layer after ensuring conditions like causual ordering
   ![receive deliver](assets/receive-deliver.png)
 

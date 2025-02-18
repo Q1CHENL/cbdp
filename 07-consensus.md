@@ -75,7 +75,7 @@ Leader election and log replication
 
   - Election timeout ([T, 2T] e.g 150-300ms): the time a Follower waits to become a candidate, i.e the time a Follower has not received a RPC (heartbeat msg)
   - Heartbeat timeout (50-150ms): the time interval a leader sends a heartbeat msg (Empty AppendEntries RPC)
-    > Heartbeat TO < Election TO to ensure followers receive regular leader messages and don’t mistakenly start a new election
+    > Heartbeat TO < Election TO to ensure followers receive regular leader messages and don't mistakenly start a new election
 
 - New election and leadership maintenance
 
@@ -93,7 +93,7 @@ Leader election and log replication
 ### Log Structure
 
 - Log entry = [Index, Term, Command]
-  > E.g the second entry of the Leader’s log is [2, 1, x := 3]
+  > E.g the second entry of the Leader's log is [2, 1, x := 3]
 - Stored on stable storage, survives crashes
 - Entry **committed** if **safe** to execute in state machines but not executed yet
   > Safe: replicated on majority of nodes
@@ -128,7 +128,7 @@ Old leader may have left entries partially replicated (uncommitted) on its log. 
 ### Safety Requirements
 
 - Leaders never overwrite entries in their logs
-- Only entries in the Leader’s log can be committed
+- Only entries in the Leader's log can be committed
 - Commit before applying to state machine
 
 To meet above requirements:
@@ -165,7 +165,7 @@ Candidate with log most likely contain all committed entries is chosen:
 - Delete extraneous entries
 - Fill missing entries
 - Leader keeps `nextIndex` for each follower, the index of the next log entry to send to that follower within RPC.
-- `nextIndex` for every Follower is initialized when the Leader is elected, to the Leader’s latest log index + 1, because Leader assumes that the Follower has all entries up to date, so it can start appending new entries from the next index when new requests come in.
+- `nextIndex` for every Follower is initialized when the Leader is elected, to the Leader's latest log index + 1, because Leader assumes that the Follower has all entries up to date, so it can start appending new entries from the next index when new requests come in.
 - If a AppendEntries consistency check fails, the Leader decrements `nextIndex` and retries
 
 ![Repair](assets/repair.png)

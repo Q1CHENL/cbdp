@@ -21,7 +21,7 @@ Big dataset splited into smaller datasets (nodes). A piece of data belongs to ex
 
 ### Choice of Sharding Key
 
-- Goal: Even distribution of data and load (not neccessarily same sizes)
+- Goal: Even distribution of data and load (not necessarily same sizes)
 - **Skewed partition**: more data or queries (partitioning scheme)
 - **Hotspot**: disproportionately high load partition (actual partition)
 
@@ -63,7 +63,7 @@ Not necessary because of wrong partition, might also be because of cluster incre
 
 ## Functional partitioning
 
-Reduce data access contention acreoss different parts of the system.
+Reduce data access contention across different parts of the system.
 
 ### Examples
 

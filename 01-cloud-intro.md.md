@@ -34,7 +34,7 @@
   - overheads and sync
   - hotspots
   - Amdahl's Law: straggler (slow running task) server limits the speedup
-  - Partition data and computate
+  - Partition data and compute
 
   ![Scalability](assets/scalability.png)
 

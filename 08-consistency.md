@@ -34,14 +34,14 @@ Different meanings in different contexts
 - **Causal Consistency:** Only causally related operations are ordered consistently; concurrent operations may be seen in different orders.
 
 - **Monotonic Reads/Writes:**  
-   - **Monotonic Reads:** Once a value is read, later reads won’t return an older value.  
-   - **Monotonic Writes:** A client’s writes are applied in the order issued.
+   - **Monotonic Reads:** Once a value is read, later reads won't return an older value.  
+   - **Monotonic Writes:** A client's writes are applied in the order issued.
 
 - **Read-Your-Writes:** A client always sees its own updates in subsequent reads.
 
 ## Two-phase commit (2PC)
 
-Most common algorithm to ensure **atomic commit across multiple nodes**.z
+Most common algorithm to ensure **atomic commit across multiple nodes**.
 
 > ![2PC](assets/2pc.png)
 >
