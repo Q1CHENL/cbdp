@@ -22,8 +22,8 @@ Big dataset splited into smaller datasets (nodes). A piece of data belongs to ex
 ### Choice of Sharding Key
 
 - Goal: Even distribution of data and load (not neccessarily same sizes)
-- Skewed partition: more data or queries
-- Hotspot: disproportionately high load partition
+- **Skewed partition**: more data or queries (partitioning scheme)
+- **Hotspot**: disproportionately high load partition (actual partition)
 
 #### Strategies
 

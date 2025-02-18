@@ -114,10 +114,10 @@ UPDATE users SET email = 'new@email.com' WHERE id = 1;
   - No limit how far a replica can fall behind.
 
 - Read your own writes: After a user writes, they should be able to immediately see that change in their subsequent reads.
-  - Read-after-write consistency
+  - Read-after-write consistency: **(always or for some time after a write) read from the leader, read based on timestamp**
 - Monotonic reads: If one user makes several reads in sequence,
   they will not read older data after previously
-  reading newer data. (e.g enforcing user to read from the same node)
+  reading newer data. (e.g **enforcing user to read from the same node**)
 
   ![Monotonic Reads](assets/monotonic-reads.png)
 
@@ -161,13 +161,13 @@ If there are `𝒏` replicas, every write must be confirmed by `w` nodes to be c
 
 Edge cases:
 
-- Two writes occur simultaneously;
-- Write happens at the same time as a read;
-- Write succeeded on some replicas but failed on others and overall succeeded on less than w nodes;
+- Two writes occur simultaneously
+- Write happens at the same time as a read
+- Write succeeded on some replicas but failed on others and overall succeeded on less than w nodes
 - Node carrying a new value fails, and its data is restored from a replica carrying an old value
 
 #### Sloppy Quorums with Hinted Handoff
 
-- Sloppy quorum: the writes and reads still require `w` and `r` successful responses, but those may be by nodes that are not the designated “home” nodes for a value.
+- Sloppy quorum: the writes and reads still require `w` and `r` successful responses, but those may be by nodes that are not the designated “home” nodes for a value. Instead, operations are performed on **first N healthy nodes from the preference list**.
 - Hinted handoff: Once the network interruption is fixed, any writes that one node temporarily accepted on behalf of another node are sent to the appropriate “home” nodes. This is called the hinted handoff.
 - Increase write availability and durability (write won't get lost)

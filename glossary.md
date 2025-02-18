@@ -16,6 +16,10 @@ A network topology feature ensuring uninterrupted data transmission by providing
 
 It is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees: Consistency, Availability, and Partition Tolerance.
 
+## PACELC
+
+If P, then the system can trade off between A and C, else the system can trade off between L (latency) and C.
+
 ## Fan-out
 
 A single request is distributed to multiple servers or services to parallelize work.

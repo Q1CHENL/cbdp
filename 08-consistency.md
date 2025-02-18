@@ -54,13 +54,13 @@ Problems:
   - crashes before sending commit/abort decision: participants are blocked
   - crashes after sending commit/abort decision: it wrote decision to disk, reads after recovery and sends decision again
 
-Solution: consensus algorithm (TOB)
+Solution: consensus algorithm (**TOB**, see below)
 
 ### Fault-toleranct 2PC
 
 Based on Paxos Commit
 
-- Every participant use TOB to dissanminate its vote
+- Every participant use **TOB** to dissanminate its vote
 - If node A suspects B has failed, A may try to vote to abort on behalf of B
 - Potential race condition: 2 conflicting votes from same node (from A and A on behalf of B) -> Resolved (TOB + counting only the 1st vote)
   ![FT-2PC](assets/ft-2pc.png)

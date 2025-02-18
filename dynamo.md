@@ -1,13 +1,13 @@
 # **Amazon Dynamo Summary**
 
-Amazon **Dynamo** is a highly available, distributed key-value store designed for low-latency and scalable applications. It provides **eventual consistency** while ensuring **high availability** and **fault tolerance** through decentralized techniques.
+Amazon **Dynamo** is a highly available, distributed **key-value** store, **non-relational** (relatively **small objects**) designed for low-latency and scalable applications. It provides **eventual consistency** while ensuring **high availability** and **fault tolerance** through decentralized techniques. **PA/EL system**. To make it **strong consistency**: drop sloppy quorum, **W+R>N**, node failure -> system failure.
 
 ## **Key Characteristics**
 
 - **Decentralized & Peer-to-Peer:** Uses a **ring-based architecture** with no central coordinator.
 - **Eventual Consistency:** Ensures **high availability** by allowing temporary inconsistencies that eventually resolve.
 - **Partitioning & Replication:** Uses **consistent hashing** to distribute and replicate data across nodes.
-- **Highly Available Writes:** Uses **quorum-based techniques** and **hinted handoff** to allow writes even during node failures.
+- **Highly Available Writes:** Uses **quorum-based techniques** and **hinted handoff** to allow writes even during node failures. **(always writable data store)**
 - **Tunable Consistency:** Clients can configure **R (reads), W (writes), and N (replicas)** to balance consistency vs. availability.
 
 ## **Main Mechanisms in Dynamo**
@@ -55,3 +55,24 @@ Amazon **Dynamo** is a highly available, distributed key-value store designed fo
 ## **Conclusion**
 
 Dynamo is a pioneering **NoSQL key-value store** that inspired modern distributed databases (e.g., **Cassandra, Riak**). It prioritizes **availability and partition tolerance** over strict consistency, making it ideal for **large-scale, fault-tolerant applications**.
+
+### **Functional Requirements for Amazon Dynamo**
+
+1. **Distributed Key-Value Store** – Uses a key-value model for fast lookups.
+2. **State storage**
+3. **Persistent data storage**
+4. **Eventual Consistency & Tunable Consistency** – Allows trade-offs between consistency and availability.
+5. **Failure Detection & Recovery** – Uses gossip-based membership protocols.
+6. **Data Replication** – Supports synchronous and asynchronous replication.
+7. **Partitioning & Load Balancing** – Uses virtual nodes for even data distribution.
+8. **Versioning & Conflict Resolution** – Handles concurrent updates using vector clocks.
+
+### **Non-Functional Requirements for Amazon Dynamo**
+
+9. **High Availability** – Designed to avoid single points of failure, running across multiple nodes.
+10. **Scalability** – Scales horizontally by adding nodes dynamically.
+11. **Fault Tolerance** – Uses multiple replicas to recover from node failures.
+12. **Low Latency** – Optimized for fast reads/writes with predictable performance.
+13. **Durability** – Ensures data persistence across failures.
+14. **Decentralized Architecture** – No single coordinator, reducing bottlenecks.
+15. **Observability** – Monitors system state using distributed logging and health checks.
