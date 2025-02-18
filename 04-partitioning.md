@@ -54,7 +54,7 @@ Not necessary because of wrong partition, might also be because of cluster incre
 
 ## Vertical partitioning
 
-- (+) ReduceD I/O and performance cost when fetching frequently accessed items (columns/properties).
+- (+) Reduced I/O and performance cost when fetching frequently accessed items (columns/properties).
 - (+) Slow moving (infrequently changed) data cab be sperated (cached) from dynamic data
 - (+) Separate sensitive data
 - (+) Suited for column-oriented data stores
